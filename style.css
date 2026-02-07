@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#App-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    background-image: linear-gradient(to right bottom, #a8c4ee, #91baee, #77b1ed, #55a8ec, #12a0eb, #77b1ed, #91baee, #a8c4ee);
+    background-size: 125% 125%;
+    background-position: 100% 100%;   
+    width: 50vh;
+    border-radius: 25px;
+    box-shadow: inset -0px -0px 25px aliceblue, 0px 0px 20px rgb(145, 160, 175);
+    transition: all 0.5s ease;
+}
+
+#App-container:hover {
+    background-position: 0% 0%;
+    box-shadow: inset 0 0 10px aliceblue, 0px 0px 30px rgb(145, 160, 175);
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 25px;
+    background-color: rgb(185, 221, 252);
+    box-shadow: inset 0px 0px 10px aliceblue;
+    transition: all 0.3s;
+}
+
+.search-bar:active #search {
+    border-radius: 10px;
+}
+.search-bar:active, #search:active {
+    border-radius: 10px;
+}
+
+#cityInput {
+    height: 30px;
+    border: none;
+    margin: 5px;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+#search{
+    height: 100%;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(100, 181, 246);
+    transition: all 0.3s ease;
+    border: 1px solid aliceblue;
+    border-bottom: 3px solid lightcyan;
+}
