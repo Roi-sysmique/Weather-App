@@ -14,6 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 25vh;
+    padding: 20px;
     background-image: linear-gradient(to right bottom, #a8c4ee, #91baee, #77b1ed, #55a8ec, #12a0eb, #77b1ed, #91baee, #a8c4ee);
     background-size: 125% 125%;
     background-position: 100% 100%;   
@@ -40,11 +41,18 @@ body{
     transition: all 0.3s;
 }
 
-.search-bar:active #search {
+.search-bar:focus-within #search {
     border-radius: 10px;
 }
-.search-bar:active, #search:active {
+.search-bar:focus-within{
     border-radius: 10px;
+}
+#search:active{
+    border-radius: 10px;
+    border: 2px solid lightcyan;
+    transform: translateY(0px);
+    box-shadow: inset 0px 2px 5px grey;
+
 }
 
 #cityInput {
@@ -55,15 +63,39 @@ body{
     padding: 5px;
     font-size: 16px;
     outline: none;
-    background-color: transparent;
+    background-color: transparent;  
 }
 
 #search{
     height: 100%;
     border-radius: 25px;
-    border: none;
+    transform: translateY(-1px);
     background-color: rgb(100, 181, 246);
-    transition: all 0.3s ease;
-    border: 1px solid aliceblue;
-    border-bottom: 3px solid lightcyan;
+    transition: all 80ms ease-in-out;
+    border: 2px solid aliceblue;
+    border-bottom: 4px solid lightcyan;
+}
+
+#weather-temp {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    width:70%;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(185, 221, 252);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px aliceblue;
+}
+
+img{
+    transform: scale(1.5);
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(100, 181, 246);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
