@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 40vh;
     padding: 20px;
     background-image: linear-gradient(to right bottom, #a8c4ee, #91baee, #77b1ed, #55a8ec, #12a0eb, #77b1ed, #91baee, #a8c4ee);
@@ -74,6 +74,7 @@ body{
     transition: all 80ms ease-in-out;
     border: 2px solid aliceblue;
     border-bottom: 4px solid lightcyan;
+    color: rgb(240, 98, 98);
 }
 
 #weather-temp {
@@ -108,6 +109,7 @@ h1 {
     width: 10%;
     margin: 10px;
     background-color: royalblue;
+    transition: all 0.3s ease;
 }
 
 input[type="checkbox"] {
@@ -123,8 +125,8 @@ input[type="checkbox"] {
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
-    width: 45%;
-    height: 90%;
+    width: 15px;
+    height: 15px;
     background-color: white;
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -132,4 +134,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + .switch::after {
     left: 70%;
+}
+
+.slider.checked {
+    background-color: tomato;   
 }
