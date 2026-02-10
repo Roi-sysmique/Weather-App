@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 25vh;
+    height: 40vh;
     padding: 20px;
     background-image: linear-gradient(to right bottom, #a8c4ee, #91baee, #77b1ed, #55a8ec, #12a0eb, #77b1ed, #91baee, #a8c4ee);
     background-size: 125% 125%;
@@ -98,4 +98,38 @@ h1 {
     font-size: 40px;
     color: rgb(100, 181, 246);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    box-shadow: inset 0px 0px 10px rgb(95, 97, 97);
+    border-radius: 25px;
+    width: 10%;
+    margin: 10px;
+    background-color: royalblue;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .switch::after {
+    left: 70%;
 }
